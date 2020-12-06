@@ -15,10 +15,15 @@ export class UsersListComponent implements OnInit {
    
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getUsers();
+   }
 
   getUsers() {
-   
+   this.fileUploadService.getAll().subscribe(users=>{
+     this.Users=users;
+     console.log(users)
+   })
   }
 
 }

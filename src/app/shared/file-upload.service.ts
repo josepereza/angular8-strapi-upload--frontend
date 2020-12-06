@@ -19,7 +19,9 @@ export class FileUploadService {
   constructor(private http: HttpClient) { }
 
   // Get Users
-  
+  getAll(){
+    return this.http.get(this.baseURL)
+  }
 
   // Create User
   addUser(employee:any): Observable<any> {
